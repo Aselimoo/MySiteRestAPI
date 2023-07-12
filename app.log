@@ -520,3 +520,257 @@ Not Found: /profile/transaction
 Watching for file changes with StatReloader
 /home/asel/Lessons/Download Project/MySiteRestApi/main/urls.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Обработка представления "Index"
+Обработка представления "SignInUserView"
+Обработка представления "SignInUserView"
+Обработка представления "Index"
+Обработка представления "UserProfileView"
+Обработка представления "UserProfileView"
+Обработка представления "UserEditProfileView"
+Обработка представления "UserEditProfileView"
+Обработка представления "UserProfileView"
+Обработка представления "UserEditProfileView"
+Обработка представления "UserEditProfileView"
+Обработка представления "UserProfileView"
+Обработка представления "AnimeView"
+Обработка представления "UserEditProfileView"
+Обработка представления "UserEditProfileView"
+Обработка представления "UserProfileView"
+Internal Server Error: /admin/main/profile/1/change/
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1855, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 110, in __str__
+    return f"{self.user.first_name.title()} {self.user.last_name.title()[0]}."
+IndexError: string index out of range
+Not Found: /favicon.ico
+Internal Server Error: /admin/main/profile/1/change/
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1855, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 110, in __str__
+    return f"{self.user.first_name.title()} {self.user.last_name.title()[0]}."
+IndexError: string index out of range
+Обработка представления "Index"
+Обработка представления "Index"
+Обработка представления "UserProfileView"
+Обработка представления "UserEditProfileView"
+Обработка представления "UserEditProfileView"
+Обработка представления "UserProfileView"
+Обработка представления "Index"
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Обработка представления "Index"
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/asel/Lessons/Download Project/MySiteRestApi/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Обработка представления "Index"
+Обработка представления "Index"
+Internal Server Error: /profile/transaction
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/views.py", line 302, in TransactionView
+    transaction.save()
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 130, in save
+    recipient_profile = Profile.get_by_phone(self.recipient_phone)
+TypeError: Profile.get_by_phone() missing 1 required positional argument: 'phone'
+/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /profile/transaction
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 135, in save
+    recipient_profile = Profile.get_by_phone(self.recipient_phone)
+TypeError: Profile.get_by_phone() missing 1 required positional argument: 'phone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/views.py", line 302, in TransactionView
+    transaction.save()
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 137, in save
+    raise Exception("Профиль получателя не найден")
+Exception: Профиль получателя не найден
+Internal Server Error: /profile/transaction
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 135, in save
+    recipient_profile = Profile.get_by_phone(self.recipient_phone)
+TypeError: Profile.get_by_phone() missing 1 required positional argument: 'phone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/views.py", line 302, in TransactionView
+    transaction.save()
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 137, in save
+    raise Exception("Профиль получателя не найден")
+Exception: Профиль получателя не найден
+Internal Server Error: /profile/transaction
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 135, in save
+    recipient_profile = Profile.get_by_phone(self.recipient_phone)
+TypeError: Profile.get_by_phone() missing 1 required positional argument: 'phone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/views.py", line 302, in TransactionView
+    transaction.save()
+  File "/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py", line 137, in save
+    raise Exception("Профиль получателя не найден")
+Exception: Профиль получателя не найден
+/home/asel/Lessons/Download Project/MySiteRestApi/main/models.py changed, reloading.
+Watching for file changes with StatReloader

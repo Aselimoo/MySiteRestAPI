@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from .utils import validate_phone_number
+
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=125, verbose_name="Название")
@@ -98,7 +100,7 @@ class Anime(models.Model):
 class Profile(models.Model):
     image = models.ImageField(upload_to="profile/", verbose_name="Фотография", help_text="Картинка должна быть Х на Х", blank=True, null=True)
     balance = models.PositiveIntegerField(default=0, verbose_name="Баланс")
-    phone = models.CharField(max_length=20, unique=True, verbose_name="Номер телефона", blank=True, null=True)
+    phone = models.CharField(max_length=20, unique=True, verbose_name="Номер телефона", blank=True, null=True, validators=[validate_phone_number])
     birth_date = models.DateField(verbose_name="Дата рождения", blank=True, null=True)
     about = models.TextField(max_length=200, verbose_name="Обо мне", blank=True, null=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name="Пользователь")
@@ -107,6 +109,9 @@ class Profile(models.Model):
     def __str__(self) -> str:
         return f"{self.user.first_name.title()} {self.user.last_name.title()[0]}."
     
+    def get_by_phone(self, phone):
+        return Profile.objects.get(phone=phone)
+    
     class Meta:
         verbose_name = "Профиль"
         verbose_name_plural = "Профили"
@@ -114,23 +119,35 @@ class Profile(models.Model):
 
 
 class Transaction(models.Model):
-    sender = models.ForeignKey(Profile, on_delete=models.PROTECT, related_name="sent_transactions", verbose_name="Отправитель") 
-    recipient = models.ForeignKey(Profile, on_delete=models.PROTECT, related_name="recipient_transactions", verbose_name="Получатель") 
+    sender_phone = models.CharField(max_length=20, verbose_name="Номер телефона отправителя")
+    recipient_phone = models.CharField(max_length=20, verbose_name="Номер телефона получателя")
     summa = models.PositiveIntegerField(default=100, verbose_name="Сумма")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
-        if self.sender.balance < self.summa:
-            raise Exception("Недостаточно средств на балансе")
+        try:
+            sender_profile = Profile.objects.get(phone=self.sender_phone)
+        except Profile.DoesNotExist:
+            raise Exception("Профиль отправителя не найден & Возможно у вас нет номера телефона")
         
-        self.sender.balance -= self.summa
-        self.recipient.balance += self.summa
-        self.sender.save()
-        self.recipient.save()
+        try:
+            recipient_profile = Profile.get_by_phone(self.recipient_phone)
+        except:
+            raise Exception("Профиль получателя не найден")
+
+        
+        if sender_profile.balance < self.summa:
+            raise Exception("Недостаточно средств на балансе отправителя")
+        
+        sender_profile.balance -= self.summa
+        recipient_profile.balance += self.summa
+        sender_profile.save()
+        recipient_profile.save()
         super().save(*args, **kwargs)
 
+
     def __str__(self) -> str:
-        return f"{self.sender_id} -> {self.recipient_id}"
+        return f"{self.sender_phone_id} -> {self.recipient_phone_id}"
     
     class Meta:
         verbose_name = "Транзакция"

@@ -293,5 +293,16 @@ def UserEditProfileView(request):
 
 
 def TransactionView(request):
-    form = TransactionForm()
-    return render(request, 'Transaction/transaction.html', {'form': form})
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = TransactionForm(request.POST)
+            if form.is_valid:
+                transaction = form.save(commit=False)
+                transaction.sender_phone = request.user.profile.phone
+                transaction.save()
+        else:
+            form = TransactionForm(initial={
+                'sender_phone': request.user.profile.phone
+            })
+        return render(request, 'Transaction/transaction.html', {'form': form})
+    return redirect('/login')

@@ -143,9 +143,34 @@ class ProfileForm(ModelForm):
 class TransactionForm(ModelForm):
     class Meta:
         model = Transaction
-        fields = ['sender', 'recipient', 'summa']
+        fields = ['sender_phone' ,'recipient_phone', 'summa']
         widgets = {
-            'sender': Select(attrs={}),
-            'recipient': Select(attrs={}),
-            'summa': NumberInput(attrs={}),
+            'sender_phone': TextInput(attrs={
+                'class': 'form-control',
+                'style': "margin: 10px;",
+                'readonly': '',
+            }),
+            'recipient_phone': TextInput(attrs={
+                'class': 'form-control',
+                'style': "margin: 10px;",
+
+            }),
+            'summa': NumberInput(attrs={
+                'class': 'form-control',
+                'style': "margin: 10px;",
+
+            }),
         }
+
+    # def clean(self):
+    #     cleaned_data = super().clean()
+    #     recipient_phone = cleaned_data.get('recipient_phone')
+    #     summa = cleaned_data.get('summa')
+
+    #     if recipient_phone:
+    #         try:
+    #             recipient_profile = Profile.objects.get(phone=recipient_phone)
+    #         except Profile.DoesNotExist:
+    #             pass
+    #         else:
+    #             pass
